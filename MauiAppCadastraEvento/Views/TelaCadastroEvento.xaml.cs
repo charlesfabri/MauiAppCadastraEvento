@@ -12,14 +12,36 @@ public partial class TelaCadastroEvento : ContentPage
         InitializeComponent();
         Evento = new Evento();
         BindingContext = this;
-
-        CadastrarEventoCommand = new Command(CadastrarEvento);
     }
 
-    private async void CadastrarEvento()
+    private async void Button_Clicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new TelaResumoEvento(Evento));
+        try
+        {
+
+
+            Evento ev = new Evento()
+            {               
+
+
+            };
+
+            await Navigation.PushAsync(new TelaResumoEvento(ev)
+            {
+                BindingContext = ev
+            });
+
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+
+
     }
+
+
 }
 
 

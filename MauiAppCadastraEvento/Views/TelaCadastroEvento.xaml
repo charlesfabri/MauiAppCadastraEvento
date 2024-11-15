@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppCadastraEvento.Views.TelaCadastroEvento"
+             Title="Tela de Cadastro de Eventos">
+
+    <StackLayout Padding="20">
+        <Label Text="Nome do Evento" />
+        <Entry Text="{Binding Nome}" />
+
+        <Label Text="Data de Início" />
+        <DatePicker Date="{Binding DataInicio}" />
+
+        <Label Text="Data de Término" />
+        <DatePicker Date="{Binding DataTermino}" />
+
+        <Label Text="Número de Participantes" />
+        <Entry Text="{Binding NumeroParticipantes}" Keyboard="Numeric" />
+
+        <Label Text="Local do Evento" />
+        <Entry Text="{Binding Local}" />
+
+        <Label Text="Custo por Participante" />
+        <Entry Text="{Binding CustoPorParticipante}" Keyboard="Numeric" />
+
+        <Button Text="Cadastrar Evento" Command="{Binding CadastrarEventoCommand}" />
+
+       
+
+
+    </StackLayout>
+</ContentPage>
